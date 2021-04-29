@@ -1,0 +1,81 @@
+.top-row-container {width:calc(100% - 33px); height:150px; background-color:$dark; color:$white; overflow:hidden;}
+.top-row-container .imgBox {float:left; position:relative;}
+.top-row-container .imgBox .title {position:absolute; bottom:0; left:0; right:0; z-index:3; text-align:center; color:$white; font-weight:600; background:#18181c; background: linear-gradient(0deg, rgba(23,23,23,1) 0%, rgba(23,23,23,0.5) 75%);}
+.slick-initialized .lightbox, .slick-initialized img {transition:0.3s;}
+.slick-initialized .lightbox:hover, .slick-initialized img:hover {z-index:9; transform:scale(1.23); -webkit-box-shadow: 0px 0px 9px 7px rgba(25,26,28,0.66); -moz-box-shadow: 0px 0px 9px 7px rgba(25,26,28,0.66); box-shadow: 0px 0px 9px 7px rgba(25,26,28,0.66);}
+.top-row-gallery {display:inline-block; position:absolute; right:0; top:50px; width:33px; height:150px; background:$dark; font-size:1.1em; font-weight:700; overflow:hidden; }
+.top-row-gallery span {display:inline-block;transform: rotate(-90deg); padding-left:50px;}
+
+/* hide top row */
+body.user-activity-page .top-row-container, body.user-notifications-page .top-row-container, body.user-summary-page .top-row-container, body.user-messages-page .top-row-container, body.user-invites-page .top-row-container, body.user-badges-page .top-row-container, body.user-preferences-page .top-row-container, body.user-follow-page .top-row-container, .static-page .top-row-container {display:none;}
+body.user-activity-page .top-row-gallery, body.user-notifications-page .top-row-gallery, body.user-summary-page .top-row-gallery, body.user-messages-page .top-row-gallery, body.user-invites-page .top-row-gallery, body.user-badges-page .top-row-gallery, body.user-preferences-page .top-row-gallery, body.user-follow-page .top-row-gallery {display:none;}
+
+.slick-slide {margin: 0; min-width:150px !important;}
+.slick-list {margin: 0px;}
+
+button.slick-next, button.slick-next:hover {position: absolute; top: 41%; right: 0px; width: 36px; height: 36px; background-image: url("https://pixologic.com/Scripts_new/zbc/arrow-right.png"); background-size: 36px;}
+button.slick-prev, button.slick-prev:hover {position: absolute; top: 41%; left: 0px; z-index: 1; width: 36px; height: 36px; background-image: url("https://pixologic.com/Scripts_new/zbc/arrow-left.png"); background-size: 36px; background-position-x: right;}
+
+.slick-prev:before, .slick-next:before {font-size: 36px; color: $white50; line-height: inherit; font-weight: normal; content:"" !important;}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list{position: relative; display: block; overflow: hidden; margin: 0; padding: 0;}
+.slick-list:focus {outline: none;}
+.slick-list.dragging{cursor: pointer; cursor: hand; }
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track{position: relative; top: 0; left: 0; display: block;}
+
+.slick-track:before,
+.slick-track:after {display: table; content: '';}
+.slick-track:after { clear: both;}
+.slick-loading .slick-track { visibility: hidden;}
+.slick-slide { display: none; float: left; height: 100%; min-height: 1px;}
+[dir='rtl'] .slick-slide{float: right;}
+.slick-slide img {display: block;}
+.slick-slide.slick-loading img{display: none;}
+.slick-slide.dragging img {pointer-events: none;}
+.slick-initialized .slick-slide {display: block;}
+.slick-loading .slick-slide {visibility: hidden;}
+.slick-vertical .slick-slide {display: block; height: auto; border: 1px solid transparent;}
+.slick-arrow.slick-hidden {display: none;}
+
+/* Slider */
+.slick-loading .slick-list {background: #fff url('https://pixologic.com/Scripts_new/zbc/ajax-loader.gif') center center no-repeat;}
+
+/* Arrows */
+.slick-prev,
+.slick-next {font-size: 0; line-height: 0; position: absolute; top: 50%; display: block; width: 20px; height: 20px; margin-top: -10px; padding: 0; cursor: pointer; color: transparent; border: none; outline: none; background: transparent; z-index:11;}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {color: transparent; outline: none; background: transparent;}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {opacity: 1;}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {opacity: .25;}
